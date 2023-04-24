@@ -1,108 +1,132 @@
+# wxcloudrun-thinkphp
+[![GitHub license](https://img.shields.io/github/license/WeixinCloud/wxcloudrun-express)](https://github.com/WeixinCloud/wxcloudrun-express)
+![GitHub package.json dependency version (prod)](https://img.shields.io/badge/php-7.3-green)
 
-# 项目介绍
+微信云托管 Thinkphp 框架模版，实现简单的计数器读写接口，使用云托管 MySQL 读写、记录计数值。
 
-
-- 本小程序采用腾讯小程序云开发技术，不需要单独部署服务器和服务端程序  
-- 功能模块包括用户注册，活动列表，活动分类，活动发布，活动报名，活动分享，活动邀请，后台管理等八大功能模块！ 
-
-# UI设计思路
-![输入图片说明](https://images.gitee.com/uploads/images/2021/0817/132823_5e09285d_9240987.png "未命名-6.png")
-
-# 功能说明
- ![输入图片说明](https://images.gitee.com/uploads/images/2021/0817/132045_ab3c55d3_9240987.gif "func导图1.gif")
+![](https://qcloudimg.tencent-cloud.cn/raw/be22992d297d1b9a1a5365e606276781.png)
 
 
-# 技术运用
+## 快速开始
+前往 [微信云托管快速开始页面](https://developers.weixin.qq.com/miniprogram/dev/wxcloudrun/src/basic/guide.html)，选择相应语言的模板，根据引导完成部署。
 
-- 项目使用微信小程序平台进行开发。
-- 使用腾讯云开发技术，免费资源配额，无需域名和服务器即可搭建。
-- 小程序本身的即用即走，适合小工具的使用场景，也适合程序的开发。
+## 本地调试
+下载代码在本地调试，请参考[微信云托管本地调试指南](https://developers.weixin.qq.com/miniprogram/dev/wxcloudrun/src/guide/debug/)
 
-# 项目效果截图
- ![输入图片说明](https://images.gitee.com/uploads/images/2021/0817/132059_b798ec12_9240987.png "首页.png")
-![输入图片说明](https://images.gitee.com/uploads/images/2021/0817/132108_bd5f5572_9240987.png "活动列表.png")
-![输入图片说明](https://images.gitee.com/uploads/images/2021/0817/132118_56ad18d0_9240987.png "活动详情.png")
-![输入图片说明](https://images.gitee.com/uploads/images/2021/0817/132125_bc7d2b73_9240987.png "活动报名.png")
-![输入图片说明](https://images.gitee.com/uploads/images/2021/0817/132134_56d27a30_9240987.png "创建活动.png")
-![输入图片说明](https://images.gitee.com/uploads/images/2021/0817/132142_62726476_9240987.png "报名表格.png")
-![输入图片说明](https://images.gitee.com/uploads/images/2021/0817/132150_e62bb226_9240987.png "个人中心.png")
+## 实时开发
+代码变动时，不需要重新构建和启动容器，即可查看变动后的效果。请参考[微信云托管实时开发指南](https://developers.weixin.qq.com/miniprogram/dev/wxcloudrun/src/guide/debug/dev.html)
 
-# 项目后台截图
-![输入图片说明](https://images.gitee.com/uploads/images/2021/0817/132448_ea1dc2a1_9240987.png "后台首页.png")
-![输入图片说明](https://images.gitee.com/uploads/images/2021/0817/132206_4d050ecf_9240987.png "后台登录.png")
-![输入图片说明](https://images.gitee.com/uploads/images/2021/0817/132226_8d48c46b_9240987.png "后台用户.png")
-![输入图片说明](https://images.gitee.com/uploads/images/2021/0817/132235_9f6aa271_9240987.png "后台报名表.png")
-![输入图片说明](https://images.gitee.com/uploads/images/2021/0817/132500_ec6a8c79_9240987.png "后台活动管理.png")
- 
-
-# 部署教程：
-
-### 1 源码导入微信开发者工具
- ![输入图片说明](https://images.gitee.com/uploads/images/2021/0817/132314_283deb7b_9240987.png "导入项目.png")
-  
-
- 
-
-### 2 开通云开发环境
- -  参考微信官方文档：https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html
-- 在使用云开发能力之前，需要先开通云开发。 
-- 在开发者工具的工具栏左侧，点击 “云开发” 按钮即可打开云控制台，根据提示开通云开发，并且创建一个新的云开发环境。
-![输入图片说明](https://images.gitee.com/uploads/images/2021/0811/232537_8a27b61c_9240987.png "云开发开通环境.png")
-- 每个环境相互隔离，拥有唯一的环境 ID(拷贝此ID，后面配置用到)，包含独立的数据库实例、存储空间、云函数配置等资源；
- 
-
-#### 3 云函数及配置
-- 本项目使用到了一个云函数activity_cloud 
+## Dockerfile最佳实践
+请参考[如何提高项目构建效率](https://developers.weixin.qq.com/miniprogram/dev/wxcloudrun/src/scene/build/speed.html)
 
 
-- 在云函数cloudfunctions文件夹下选择云函数activity_cloud , 右键选择在终端中打开,然后执行 
-- npm install –product
- ![输入图片说明](https://images.gitee.com/uploads/images/2021/0817/132527_66885616_9240987.png "安装云函数依赖.png")
-![输入图片说明](https://images.gitee.com/uploads/images/2021/0817/132534_32f08680_9240987.png "安装云函数类库.png")
-
- 
-
-- 打开cloudfunctions/activity_cloud/comm/ccmini_config.js文件，配置环境ID和后台管理员手机号码
-
- ![输入图片说明](https://images.gitee.com/uploads/images/2021/0811/232806_b0477e47_9240987.png "云函数配置.png")
-
- 
-
-
-#### 4  客户端配置
-- 打开miniprogram/app.js文件，配置环境ID
-
- ![输入图片说明](https://images.gitee.com/uploads/images/2021/0811/232832_6053aae0_9240987.png "客户端配置.png")
-
-
-#### 5  云函数配置
-- 在微信开发者工具-》云开发-》云函数-》对指定的函数添加环境变量 
-- [服务端时间时区TZ] =>Asia/Shanghai
-- [函数内存] =>128M   
-- [函数超时时间] => 20秒
- ![输入图片说明](https://images.gitee.com/uploads/images/2021/0817/132723_565c091b_9240987.png "云函数配置.png")
-
- 
-
-#### 6  设置图片域名信任关系
-- 进入小程序 开发管理=》开发设置=》服务器域名 =》downloadFile合法域名	
-- 添加2个域名：
-- 1）你的云存储域名，格式类似：https://1234-test-pi5po-1250248.tcb.qcloud.la
-- 2）微信头像域名：https://thirdwx.qlogo.cn 
-![输入图片说明](https://images.gitee.com/uploads/images/2021/0811/233716_fccfac0e_9240987.png "业务域名.png")
-
-#### 7  上传云函数&指定云环境ID
- ![输入图片说明](https://images.gitee.com/uploads/images/2021/0817/132739_7afde10a_9240987.png "上传云函数.png")
-
-### 至此完全部署配置完毕。
-
-### 在线演示：
- 
-
- ![输入图片说明](https://images.gitee.com/uploads/images/2021/0811/233918_96b29222_9240987.jpeg "Free版-QR.jpg")
+## 目录结构说明
+~~~
+.
+├── Dockerfile                  Dockerfile 文件
+├── README.md                   README 文件
+├── app                         应用目录
+│   ├── controller              控制器目录
+│   ├── model                   模型目录
+│   └── view                    视图目录
+├── conf                        配置文件
+│   ├── fpm.conf                fpm 配置
+│   ├── nginx.conf              nginx 配置
+│   └── php.ini                 php 配置
+├── config                      thinkphp 配置
+├── container.config.json       模板部署「服务设置」初始化配置（二开请忽略）
+├── public                      WEB目录（对外访问目录）
+│   ├── favicon.ico             图标
+│   ├── index.php               入口文件       
+│   └── router.php              快速测试文件 
+├── route                       路由文件			
+│   └── app.php                 定义应用路由
+├── run.sh                      nginx、fpm 启动
+├── runtime                     应用的运行时目录（可写，可定制）
+├── think                       命令行入口文件
+└── vendor                      第三方类库目录
+~~~
 
 
-### 如有疑问，欢迎骚扰联系我鸭： 
-### 俺的微信:  cclinux0730
+## 服务 API 文档
+
+### `GET /api/count`
+
+获取当前计数
+
+#### 请求参数
+
+无
+
+#### 响应结果
+
+- `code`：错误码
+- `data`：当前计数值
+
+##### 响应结果示例
+
+```json
+{
+  "code": 0,
+  "data": 42
+}
+```
+
+#### 调用示例
+
+```
+curl https://<云托管服务域名>/api/count
+```
 
 
+
+### `POST /api/count`
+
+更新计数，自增或者清零
+
+#### 请求参数
+
+- `action`：`string` 类型，枚举值
+  - 等于 `"inc"` 时，表示计数加一
+  - 等于 `"clear"` 时，表示计数重置（清零）
+
+##### 请求参数示例
+
+```
+{
+  "action": "inc"
+}
+```
+
+#### 响应结果
+
+- `code`：错误码
+- `data`：当前计数值
+
+##### 响应结果示例
+
+```json
+{
+  "code": 0,
+  "data": 42
+}
+```
+
+#### 调用示例
+
+```
+curl -X POST -H 'content-type: application/json' -d '{"action": "inc"}' https://<云托管服务域名>/api/count
+```
+
+## 使用注意
+如果不是通过微信云托管控制台部署模板代码，而是自行复制/下载模板代码后，手动新建一个服务并部署，需要在「服务设置」中补全以下环境变量，才可正常使用，否则会引发无法连接数据库，进而导致部署失败。
+- MYSQL_ADDRESS
+- MYSQL_PASSWORD
+- MYSQL_USERNAME
+以上三个变量的值请按实际情况填写。如果使用云托管内MySQL，可以在控制台MySQL页面获取相关信息。
+
+
+
+## License
+
+[MIT](./LICENSE)
